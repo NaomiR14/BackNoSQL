@@ -2,8 +2,10 @@
   "name": "backnosql",
   "version": "1.0.0",
   "description": "Este proyecto es un Backend de una conexion a base de datos No SQL",
-  "main": "index.js",
+  "main": "app.js",
+  "type": "module",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +18,13 @@
   "bugs": {
     "url": "https://github.com/NaomiR14/BackNoSQL/issues"
   },
-  "homepage": "https://github.com/NaomiR14/BackNoSQL#readme"
+  "homepage": "https://github.com/NaomiR14/BackNoSQL#readme",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mogoose": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
 }
