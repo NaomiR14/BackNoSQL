@@ -12,9 +12,9 @@
     "type": "git",
     "url": "git+https://github.com/NaomiR14/BackNoSQL.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["NOSQL", "Express", "Backend", "Software"],
+  "author": "Naomi Roman",
+  "license": "ISC, MIT license",
   "bugs": {
     "url": "https://github.com/NaomiR14/BackNoSQL/issues"
   },
