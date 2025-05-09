@@ -12,7 +12,12 @@
     "type": "git",
     "url": "git+https://github.com/NaomiR14/BackNoSQL.git"
   },
-  "keywords": ["NOSQL", "Express", "Backend", "Software"],
+  "keywords": [
+    "NOSQL",
+    "Express",
+    "Backend",
+    "Software"
+  ],
   "author": "Naomi Roman",
   "license": "ISC, MIT license",
   "bugs": {
@@ -22,7 +27,7 @@
   "dependencies": {
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
-    "mogoose": "^0.0.1-security"
+    "mongoose": "^8.14.2"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
