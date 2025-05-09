@@ -4,7 +4,7 @@ import { mongoDomain, mongoPWD, mongoUser, mongoDb } from "../config/constants.j
 
 const connectDB = async () => {
     try {
-        await mongoose.connect("U@roman.cfneyxj.mongodb.net/");
+        await mongoose.connect(mongoDomain+mongoUser+':'+mongoPWD+'@'+mongoDb);
         console.log('MongoDB Connected...');
     } catch (error) {
         console.error(error);
