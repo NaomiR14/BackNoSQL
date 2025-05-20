@@ -7,7 +7,7 @@ const healtcheck = (req,res) =>{
 
     res.status(200).json({
         status: "Ok",
-        message: "Server running"
+        message: "Server running correctly "
     })
 }
 

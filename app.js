@@ -1,7 +1,8 @@
 import express from 'express';
 import connectDB from './scr/config/db.js';
-import { port, uri } from './scr/config/constants.js'
-import healtCheckRoutes from './scr/routes/healtCheckRoutes.js'
+import { port, uri } from './scr/config/constants.js';
+import healtCheckRoutes from './scr/routes/healtCheckRoutes.js';
+import userRoutes from './scr/routes/userRoutes.js';
 
 connectDB();
 
@@ -10,6 +11,9 @@ const app = express();
 app.use(express.json());
 
 app.use(uri,healtCheckRoutes);
+
+//http://localhost:500/api/v0/users
+app.use(`${uri}/users`, userRoutes);
 
 // // Rutas
 // import userRoutes from './routes/userRoutes.js';
