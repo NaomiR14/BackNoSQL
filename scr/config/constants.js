@@ -6,6 +6,7 @@ const envPath = path.resolve(process.cwd(),`.env.${process.env.NODE_ENV || 'deve
 dotenv.config({path: envPath});
 
 export const uri = process.env.URI_APP
+export const keyToken = process.env.JWT_SECRET
 
 export const port = process.env.PORT_APP
 export const mongoDomain = process.env.MONGO_DOMAIN
