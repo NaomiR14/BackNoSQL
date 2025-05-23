@@ -1,6 +1,6 @@
 import User from "../model/Users.js";
 import jwt from 'jsonwebtoken';
-//import bcrypt from 'bcryptjs';
+import bcrypt from 'bcryptjs';
 import { keyToken  } from '../config/constants.js';
 
 const generateToken = (id) => {
@@ -35,18 +35,25 @@ export const registerUser = async (req, res) => {
   }
 };
 
-// export const authenticateUser = async (req, res) => {
-//   const { email, password } = req.body;
-//   const user = await User.findOne({ email });
+//Logica 2 Nos logeamos a nuestra app
 
-//   if (user && (await bcrypt.compare(password, user.password))) {
-//     res.json({
-//       _id: user._id,
-//       name: user.name,
-//       email: user.email,
-//       token: generateToken(user._id),
-//     });
-//   } else {
-//     res.status(401).json({ message: 'Invalid email or password' });
-//   }
-// };
+export const authenticateUser = async (req, res) => {
+  const { email, password } = req.body;
+  const user = await User.findOne({ email });
+
+  console.log("Usuario: " + user)
+
+  // console.log(`Contrasenia: ${password}   `)
+  // console.log(`Contrasenia Cifrada guardada en DB: ${user.password} `)
+
+  if (user && (await bcrypt.compare(password, user.password))) {
+    res.json({
+      _id: user._id,
+      name: user.name,
+      email: user.email,
+      token: generateToken(user._id),
+    });
+  } else {
+    res.status(401).json({ message: 'Invalid email or password' });
+  }
+};
